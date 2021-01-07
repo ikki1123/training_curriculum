@@ -34,11 +34,7 @@ class CalendarsController < ApplicationController
       plans.each do |plan|
         today_plans.push(plan.plan) if plan.date == @todays_date + x
       end
-<<<<<<< HEAD
-      days =  {month: (@todays_date + x).month, date: (@todays_date +x).day, plans: today_plans}
-=======
-      days =  {month: (@todays_date + x).month, date:(@todays_date +x).day, plans: today_plans}
->>>>>>> 667b3081a3d481d4cdb64c7170c0d59fa6e1c00a
+      days = { month: (@todays_date + x).month, date: (@todays_date+x).day, plans: today_plans}
       @week_days.push(days)
     end
   end
